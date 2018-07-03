@@ -5,6 +5,7 @@ This is the repository for the development of the Index-Tree newsletter extensio
 The extension allows:
 
 - Users susbscribe for newsletter
+- User can unsubscribe from link
 - Download subscribers list 
 
 📦 [Download](https://github.com/mguntis/phpbb-newsletter/archive/master.zip) the latest release of this extension.

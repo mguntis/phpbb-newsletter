@@ -211,7 +211,7 @@ class main
 
                 $data = array(
                     'subscriber_name'     => $name,
-                    'subscriber_email'     => $email,
+                    'subscriber_email'     => strtolower($email),
                     'unsubscribe_id' => $this->generateRandomToken(),
                 );
 

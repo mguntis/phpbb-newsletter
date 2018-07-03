@@ -102,7 +102,7 @@ class main_module
                         while ($row = $db->sql_fetchrow($result)) {
                             $data[] = [
                                 'subscriber_name' => $row['subscriber_name'],
-                                'subscriber_email' => $row['subscriber_email'],
+                                'subscriber_email' => strtolower($row['subscriber_email']),
                                 'unsubscribe_id' => $row['unsubscribe_id']
                             ];
 

@@ -1,0 +1,41 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_ACP_DOWNLOAD}</h1>
+<p>Download subscribers list</p>
+
+<form id="acp_board" method="post" action="{U_ACTION}">
+    <fieldset>
+        <dl>
+            <dt><label for="indextree_download_filetype">{L_ACP_DOWNLOAD_FILETYPE}{L_COLON}</label><br>{L_ACP_DOWNLOAD_FILETYPE_EXPLAIN}</dt>
+            <dd>
+                <select id="subscribers_filetype" name="indextree_download_filetype">
+                    <option value="1">CSV file</option>
+                    <option value="2">Text file</option>
+                    <option value="3">JSON file</option>
+                </select>
+            </dd>
+        </dl>
+        <dl>
+            <dt><label for="indextree_download_name">{L_ACP_DOWNLOAD_NAME}{L_COLON}</label><br>{L_ACP_DOWNLOAD_NAME_EXPLAIN}</dt>
+            <dd>
+                <label><input type="radio" class="radio" name="indextree_download_name" value="1" <!-- IF INDEXTREE_DOWNLOAD_NAME -->checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+                <label><input type="radio" class="radio" name="indextree_download_name" value="0" <!-- IF not INDEXTREE_DOWNLOAD_NAME -->checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+            </dd>
+        </dl>
+        <dl>
+            <dt><label for="indextree_download_seperator">{L_ACP_DOWNLOAD_SEPERATOR}{L_COLON}</label><br>{L_ACP_DOWNLOAD_SEPERATOR_EXPLAIN}</dt>
+            <dd>
+                <input name="indextree_download_seperator" type="text" class="text medium" maxlength="1" id="appform_poll_title" value="{INDEXTREE_DOWNLOAD_SEPERATOR}">
+            </dd>
+        </dl>
+
+
+        <p class="submit-buttons">
+            <input class="button1" type="submit" id="submit" name="submit" value="{L_DOWNLOAD}" />&nbsp;
+        </p>
+
+        {S_FORM_TOKEN}
+    </fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,21 @@
+services:
+    indextree.newsletter.controller:
+        class: indextree\newsletter\controller\main
+        arguments:
+            - '@config'
+            - '@controller.helper'
+            - '@template'
+            - '@user'
+            - '@request'
+            - '@dbal.conn'
+    indextree.newsletter.listener:
+        class: indextree\newsletter\event\listener
+        arguments:
+            - '@controller.helper'
+            - '@template'
+            - '@request'
+            - '@config'
+            - '@user'
+            - '@dbal.conn'
+        tags:
+            - { name: event.listener }

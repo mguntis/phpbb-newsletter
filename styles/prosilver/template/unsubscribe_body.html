@@ -1,0 +1,56 @@
+<!-- INCLUDE overall_header.html -->
+
+<!-- IF UNSUBSCRIBE_PAGE -->
+
+<div><h2 class="h2-subscribe">We are sorry to hear that you have unsubscribed to the workpermit.com newsletter</h2></div>
+
+<form autocomplete="off" action="{U_UNSUBSCRIBE}" method="post" id="formoid" class="form-unsubscribe">
+    <div class="panel">
+        <div class="content">
+            <!-- IF ERROR -->
+            <div class="message warning">
+                <p><strong>{L_WARNING} </strong>{ERROR}</p>
+            </div>
+            <!-- ENDIF -->
+            <fieldset>
+                <div>
+                    <label class="forumtitle"><h3>{L_EMAIL_UNSUBSCRIBE}</h3></label><br>
+                    <input autocomplete="on" type="text" name="email" class="autowidth" size="25" value="{EMAIL}" disabled>
+                </div><br>
+
+                <div>
+                    <label class="title"><h3>{L_LEFT_MESAGE}</h3></label>
+                    <div>
+                        <div class="unsubs-reason"><input type="radio" name="answer" id="answer-1" value="ans1"><span>{L_ANSWER1}</span></div>
+                        <div class="unsubs-reason"><input type="radio" name="answer" id="answer-2" value="ans2"><span>{L_ANSWER2}</span><br></div>
+                        <div class="unsubs-reason"><input type="radio" name="answer" id="answer-3" value="ans3"><span>{L_ANSWER3}</span><br></div>
+                        <div class="unsubs-reason"><input type="radio" name="answer" id="answer-4" value="other"><span>{L_ANSWER4}<br></span></div>
+
+                        <input type="text" class="inputbox autowidth unsubscribe-other" maxlength="45" size="45" name="answer-other" id="answer-other">
+                        <div id="unsubscribe-count">{L_CHAR_LEFT} 45</div><br>
+                    </div>
+                    <div>
+                        <p class="submit-buttons"><input class="button2" type="submit" id="submit" name="submit" value="{L_UNSUBSCRIBE}" /></p>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</form>
+
+<!-- ELSE -->
+<div class="panel">
+    <div class="content">
+    <fieldset>
+        <div class="message information">
+            <p><strong>{L_INFO} </strong>{L_SUCCESS_MESSAGE_UNSUBSCRIBE}</p>
+        </div></br>
+        <div>
+            <a href="{U_INDEX}" class="button2" type="submit" >{L_TO_PAGE}</a>
+        </div>
+    </fieldset>
+</div>
+</div>
+<!-- ENDIF -->
+
+<!-- INCLUDE overall_footer.html -->

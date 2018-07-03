@@ -1,0 +1,31 @@
+<!-- IF S_INDEXTREE_NEWSLETTER_ENABLE and not S_USER_SUBSCRIBED -->
+
+<!-- IF S_USER_LOGGED_IN  and not S_IS_BOT -->
+<form autocomplete="off" action="{U_NEWSLETTER_SUBSCRIBE}" method="post" id="form-logged" class="subscribe-form">
+    <div class="panel">
+        <div class="content">
+            <fieldset>
+                <h2 class="h2-subscribe"><b><i>{L_H2_SUBSCRIBE}</i></b></h2>
+                <input class="button2" type="submit" id="submit" name="submit" value="{L_SUBSCRIBE}" />
+            </fieldset>
+        </div>
+    </div>
+</form>
+<!-- ELSE -->
+<form autocomplete="off" action="{U_NEWSLETTER_SUBSCRIBE}" method="post" id="form-unlogged" class="subscribe-form">
+    <div class="panel">
+        <div class="content">
+            <fieldset>
+                {PRINT}
+                <h2 class="h2-subscribe"><b><i>{L_H2_SUBSCRIBE}</i></b></h2>
+                <p>{L_H3_SUBSCRIBE}</p>
+                <!-- IF S_INDEXTREE_NEWSLETTER_NAME --> <input type="text" size="25" placeholder="Name" name="name" class="inputbox autowidth" required> <!-- ENDIF -->
+                <input type="text" size="25" placeholder="Email address" name="mail" class="inputbox autowidth" required>
+                <input class="button2" type="submit" id="submit" name="submit" value="{L_SUBSCRIBE}" />
+            </fieldset>
+        </div>
+    </div>
+</form>
+<!-- ENDIF -->
+
+<!-- ENDIF -->

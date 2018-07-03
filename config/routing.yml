@@ -1,0 +1,8 @@
+indextree_newsletter_controller_unsubscribe:
+    path: /newsletter/unsubscribe/{link}
+    defaults: { _controller: indextree.newsletter.controller:handle }
+
+
+indextree_newsletter_controller_subscribe:
+    path: /newsletter/subscribe
+    defaults: { _controller: indextree.newsletter.controller:subscribe }

@@ -1,0 +1,33 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_ACP_SETTINGS}</h1>
+<p>Configure newsletter module</p>
+
+<form id="acp_board" method="post" action="{U_ACTION}">
+    <fieldset>
+        {INDEXTREE_DEBUG}
+        <dl>
+            <dt><label for="indextree_newsletter_enable">{L_ACP_NEWSLETTER_ENABLE}{L_COLON}</label><br>{L_ACP_NEWSLETTER_ENABLE_EXPLAIN}</dt>
+            <dd><label><input type="radio" class="radio" name="indextree_newsletter_enable" value="1" <!-- IF INDEXTREE_NEWSLETTER_ENABLE -->checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+                <label><input type="radio" class="radio" name="indextree_newsletter_enable" value="0" <!-- IF not INDEXTREE_NEWSLETTER_ENABLE -->checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+        </dl>
+        <dl>
+            <dt><label for="indextree_newsletter_name">{L_ACP_NEWSLETTER_NAME}{L_COLON}</label><br>{L_ACP_NEWSLETTER_NAME_EXPLAIN}</dt>
+            <dd><label><input type="radio" class="radio" name="indextree_newsletter_name" value="1" <!-- IF INDEXTREE_NEWSLETTER_NAME -->checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+                <label><input type="radio" class="radio" name="indextree_newsletter_name" value="0" <!-- IF not INDEXTREE_NEWSLETTER_NAME-->checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+        </dl>
+        <dl>
+            <dt><label for="indextree_newsletter_position">{L_ACP_NEWSLETTER_POSITION}{L_COLON}</label><br>{L_ACP_NEWSLETTER_POSITION_EXPLAIN}</dt>
+            <dd><select id="newsletter_position" name="indextree_newsletter_position">{INDEXTREE_NEWSLETTER_POSITION}</select></dd>
+        </dl>
+
+        <p class="submit-buttons">
+            <input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+            <input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+        </p>
+
+        {S_FORM_TOKEN}
+    </fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

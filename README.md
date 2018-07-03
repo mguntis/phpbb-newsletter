@@ -1,6 +1,6 @@
 # Index-Tree Newsletter module
 
-This is the repository for the development of the Index-Tree newsletter extension, project developed by Guntis Mosans for phpBB.
+This is the repository for the development of the Index-Tree newsletter extension, project developed by Guntis Mosans for phpBB 3.2.2.
 
 The extension allows:
 

@@ -1,6 +1,6 @@
 # Index-Tree Newsletter module
 
-This is the repository for the development of the Advertisement Management extension, a Google Summer of Code project developed by Jakub Senko for phpBB.
+This is the repository for the development of the Index-Tree newsletter extension, project developed by Guntis Mosans for phpBB.
 
 The extension allows:
 

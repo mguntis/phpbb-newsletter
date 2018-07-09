@@ -163,9 +163,14 @@ class main_module
                     exit();
                 }
 
+                $sql_count = 'SELECT COUNT(subscriber_email) AS subs_count FROM phpbb_indextree_newsletter';
+                $result = $db->sql_query($sql_count);
+
+                $count = (int) $db->sql_fetchrow($result)['subs_count'];
 
                 $template->assign_vars(array(
                     'U_ACTION'				=> $this->u_action,
+                    'INDEXTREE_COUNT' => $count,
                     'INDEXTREE_DOWNLOAD_NAME'		=> $config['indextree_download_name'],
                     'INDEXTREE_DOWNLOAD_SEPERATOR'		=> $config['indextree_download_seperator'],
                 ));
